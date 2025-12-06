@@ -1,9 +1,9 @@
 [project]
 name = "pos-ai"
 version = "0.1.0"
-description = "Add your description here"
+description = "POS AI is an AI-powered tool designed to assist with point-of-sale systems by leveraging natural language processing and machine learning techniques."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
     "langchain>=1.1.2",
     "langchain-openai>=1.1.0",
@@ -13,4 +13,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ipykernel>=7.1.0",
+    "langgraph-cli[inmem]>=0.4.7",
 ]
