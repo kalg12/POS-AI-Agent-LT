@@ -1,36 +1,46 @@
-# Instructions
+# Project Setup (LangChain + LangGraph with uv)
 
-We can add the next line for add dependencies
+This repository uses **uv** to manage dependencies and run a local LangGraph development server. It also includes Jupyter tooling for fast experimentation (agents, tools, RAG, etc.).
 
+## Requirements
+
+- Python 3.11+
+- uv installed
+
+## Install core dependencies
+
+```bash
 uv add langgraph langchain langchain-openai
+```
 
-# Langgraph CLI
+## Install the LangGraph CLI (development)
 
-In this part we should add the langgraph cli, but we can add a flag to run as development mode.
+Add the LangGraph CLI as a dev dependency. The `inmem` extra enables an in-memory backend that is great for local testing.
 
+```bash
 uv add "langgraph-cli[inmem]" --dev
+```
 
-# Jupyter
+## Add Jupyter (development)
 
-Also in our project is need to add jupyter as development mode for explore all AI agents, tools, rag, etc.
+We use Jupyter for exploration and prototyping.
 
+```bash
 uv add ipykernel --dev
+```
 
-# Run the agent
+## Run the agent (dev server)
 
-The followinf part is for run our agent
+Start the LangGraph development server:
 
+```bash
 uv run langgraph dev
+```
 
-# Project Structure
+## Project structure
 
-I've made a clean folder structure, creating folders, lik notebooks, into src: agents and api. Agents for createt multiple agents. It is important
-to inform to pyproject.toml this structre, adding the followind:
+The project uses a clean `src/` layout so the codebase stays organized as it grows.
 
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["*"]
-
-# Install the project
-
-uv pip install -e .
+```text
+.
+```
