@@ -210,3 +210,6 @@ pyrightconfig.json
 
 
 .langgraph_api
+
+# Ignore environment files
+*.env
